@@ -77,8 +77,8 @@ stderr (дескриптор 2) — стандартный вывод ошибо
 
   # 5.3 перенаправить `stdout` и `stderr` в один файл;
   Символ 2>&1 означает: «взять поток ошибок (2) и перенаправить его туда же, куда идет стандартный вывод (1)». И список файлов, и текст ошибки попадают в один файл all_output.txt.
+  <img width="1488" height="78" alt="2%6" src="https://github.com/user-attachments/assets/db03ad28-2881-4a02-8a38-a6b2b721384d" />
 
-<ima width="1488" height="78" alt="2%6" src="https://github.com/user-attachments/assets/d85cc7ca-f7bd-4d57-a19e-5f47f01d40dd" />
 
  #  5.4) перенаправить `stdout` и `stderr` в разные файлы.
  Успешный вывод записывается в out.txt, а сообщение об ошибке — в err.txt.
