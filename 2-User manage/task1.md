@@ -116,9 +116,8 @@
  
 3. **Комбинированный вариант:**
 Иногда используют связку sudo su, чтобы, имея права на sudo (но не зная пароля root), переключиться в полноценную сессию суперпользователя:
-
-  ```bash
-  sudo su
+   ```bash
+   sudo su
 
 <img width="535" height="82" alt="image" src="https://github.com/user-attachments/assets/84c6ff8d-ae2a-49f3-9962-5a77f765dc13" />
 
