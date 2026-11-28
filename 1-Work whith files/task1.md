@@ -55,28 +55,34 @@
 
 
 ## 4. Создание каталога с вложенными подкаталогами
+Создана вложенная структура каталогов practice/first/second/third. Проверка содержимого папки practice командой ls подтверждает, что внутри появилась папка first.
 
-    nasta@MacBook-Air-Nasta ~ % mkdir -p practice/first/second/third
-    nasta@MacBook-Air-Nasta ~ % ls practice
-    first
+<img width="978" height="130" alt="скрин4" src="https://github.com/user-attachments/assets/62478df4-a8b7-41fa-b2c6-09e7e98d0f3d" />
+
 
 ## 5. Создание файла и запись в него нескольких строк
 
-    nasta@MacBook-Air-Nasta ~ % printf "5\n2\n8\n1\n4\n" > practice/first/second/third/numbers.txt
-    nasta@MacBook-Air-Nasta ~ % cat practice/first/second/third/numbers.txt
-    5
-    2
-    8
-    1
-    4
+Для создания файла и записи в него текста прямо из терминала используется команда `printf`. Спецсимвол `\n` обозначает перенос строки (аналог нажатия клавиши Enter). Символ `>` (перенаправление вывода) записывает сгенерированный текст в указанный файл, а не выводит его на экран.
+
+В папке third создан файл numbers.txt. В него записаны числа 5, 2, 8, 1 и 4, каждое с новой строки. Команда cat использована для проверки содержимого файла — она вывела записанные числа в консоль.
+
+<img width="1280" height="206" alt="скрин5" src="https://github.com/user-attachments/assets/8b59b7dd-cce2-4b5f-9eef-924296187af2" />
+
 
 ## 6. Перемещение файла между каталогами
 
-    nasta@MacBook-Air-Nasta ~ % mv practice/first/second/third/numbers.txt practice/numbers.txt
+Для перемещения файлов используется команда `mv` (move). Первым аргументом указывается исходный путь к файлу, вторым — новое место назначения.
+
+Файл numbers.txt перемещен из глубоко вложенной папки third на два уровня выше — в корень папки practice. Исходный файл по старому пути удален.
+
+<img width="1280" height="199" alt="скрин6" src="https://github.com/user-attachments/assets/e236766f-6fd1-43a1-b1fa-16e373ad10fe" />
+
 
 ## 7. Копирование файла в другой каталог
 
     nasta@MacBook-Air-Nasta ~ % cp practice/numbers.txt practice/first/numbers_copy.txt
+
+<img width="1280" height="154" alt="скрин7" src="https://github.com/user-attachments/assets/61f52645-b888-449d-ae68-8fe95b07c6b7" />
 
 ## 8. Переименование файла
 
