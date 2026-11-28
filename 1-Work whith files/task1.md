@@ -125,6 +125,9 @@
 
 Первая команда нашла точный путь к конкретному файлу. Вторая команда с использованием маски *.txt вывела список всех текстовых файлов во всей структуре
 
+<img width="940" height="200" alt="скрин10" src="https://github.com/user-attachments/assets/79d4b8a4-b5ca-410f-a4bc-1702110681a7" />
+
+
 <img width="892" height="164" alt="скрин12" src="https://github.com/user-attachments/assets/9923c965-1da7-405c-89aa-14f173a215b7" />
 
 
