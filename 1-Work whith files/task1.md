@@ -92,7 +92,7 @@
 
 Файл numbers_copy.txt, находящийся в папке first, переименован в data.txt. Папка осталась прежней, изменилось только имя файла. Терминал выполнил команду без вывода сообщений, что означает успех.
 
-<img width="1242" height="182" alt="скрин8" src="https://github.com/user-attachments/assets/85315869-71f5-4367-9cfd-55f154a19847" />
+<img width="1280" height="154" alt="скрин7" src="https://github.com/user-attachments/assets/e0db4130-66ca-423f-b011-065276fba795" />
 
 
 ## 9. Сравнение содержимого двух файлов
@@ -101,7 +101,8 @@
 
 Создан файл numbers2.txt. diff сравнила его с numbers.txt и вывела результат 3c3. Это означает, что в третьей строке (3) произошло изменение (c — change). Символ < 8 указывает на содержимое первого файла, а > 7 — на содержимое второго.
 
-<img width="904" height="222" alt="скрин9" src="https://github.com/user-attachments/assets/7c0579da-7187-4033-aab9-9ec14b1cd117" />
+<img width="1242" height="182" alt="скрин8" src="https://github.com/user-attachments/assets/70db30a3-30c5-4a94-9cd6-6b5940bec08a" />
+
 
 
 ## 10. Сортировка содержимого файла по возрастанию и убыванию
@@ -110,11 +111,13 @@
 
 Первая команда вывела числа из файла numbers.txt по возрастанию: 1, 2, 4, 5, 8.
 
-<img width="940" height="200" alt="скрин10" src="https://github.com/user-attachments/assets/0bc29da6-af0e-4a12-8578-438c9d76c242" />
+<img width="904" height="222" alt="скрин9" src="https://github.com/user-attachments/assets/a9a525b5-a3fc-476a-984f-284c847c6497" />
+
 
 Вторая команда с флагом -r вывела те же числа в обратном порядке (по убыванию): 8, 5, 4, 2, 1.
 
-<img width="920" height="100" alt="скрин11" src="https://github.com/user-attachments/assets/c3c56380-7a67-4b03-883c-fac07f89f531" />
+<img width="940" height="200" alt="скрин10" src="https://github.com/user-attachments/assets/7873941f-63f0-489e-bbfa-9760f41df8db" />
+
 
 ## 11. Поиск созданного файла по имени
 
