@@ -79,72 +79,60 @@
 
 
 ## 7. Копирование файла в другой каталог
+Для копирования файлов используется команда `cp` (copy). Она берет исходный файл и создает его точную копию по указанному новому пути, при этом оригинал остается на месте.
 
-    nasta@MacBook-Air-Nasta ~ % cp practice/numbers.txt practice/first/numbers_copy.txt
+Создана копия файла numbers.txt. Копия помещена в папку first и названа numbers_copy.txt.
 
 <img width="1280" height="154" alt="скрин7" src="https://github.com/user-attachments/assets/61f52645-b888-449d-ae68-8fe95b07c6b7" />
 
 ## 8. Переименование файла
 
-    nasta@MacBook-Air-Nasta ~ % mv practice/first/numbers_copy.txt practice/first/data.txt
+Для переименования файла используется команда `mv`. Если исходный и конечный пути указывают на одну и ту же директорию, команда просто меняет имя файла.
+
+
+Файл numbers_copy.txt, находящийся в папке first, переименован в data.txt. Папка осталась прежней, изменилось только имя файла. Терминал выполнил команду без вывода сообщений, что означает успех.
+
+<img width="1242" height="182" alt="скрин8" src="https://github.com/user-attachments/assets/85315869-71f5-4367-9cfd-55f154a19847" />
+
 
 ## 9. Сравнение содержимого двух файлов
 
-Создание второго файла:
+Для построчного сравнения двух текстовых файлов используется `diff` (difference). Сначала создается второй файл с измененным содержимым (третье число заменено с 8 на 7), затем выполняется сравнение.
 
-    nasta@MacBook-Air-Nasta ~ % printf "5\n2\n7\n1\n4\n" > practice/numbers2.txt
+Создан файл numbers2.txt. diff сравнила его с numbers.txt и вывела результат 3c3. Это означает, что в третьей строке (3) произошло изменение (c — change). Символ < 8 указывает на содержимое первого файла, а > 7 — на содержимое второго.
 
-Сравнение файлов:
+<img width="904" height="222" alt="скрин9" src="https://github.com/user-attachments/assets/7c0579da-7187-4033-aab9-9ec14b1cd117" />
 
-    nasta@MacBook-Air-Nasta ~ % diff practice/numbers.txt practice/numbers2.txt
-    3c3
-    < 8
-    ---
-    > 7
-
-Результат показывает, что файлы отличаются в третьей строке: в первом файле записано число 8, а во втором — 7.
 
 ## 10. Сортировка содержимого файла по возрастанию и убыванию
 
-Сортировка по возрастанию:
+Для сортировки строк в файле используется команда `sort`. По умолчанию она сортирует в алфавитном порядке. Чтобы сортировка применялась к числам корректно, используется флаг `-n` (numeric). Для сортировки в обратном порядке (по убыванию) добавляется флаг `-r` (reverse).
 
-    nasta@MacBook-Air-Nasta ~ % sort -n practice/numbers.txt
-    1
-    2
-    4
-    5
-    8
+Первая команда вывела числа из файла numbers.txt по возрастанию: 1, 2, 4, 5, 8.
 
-Сортировка по убыванию:
+<img width="940" height="200" alt="скрин10" src="https://github.com/user-attachments/assets/0bc29da6-af0e-4a12-8578-438c9d76c242" />
 
-    nasta@MacBook-Air-Nasta ~ % sort -nr practice/numbers.txt
-    8
-    5
-    4
-    2
-    1
+Вторая команда с флагом -r вывела те же числа в обратном порядке (по убыванию): 8, 5, 4, 2, 1.
+
+<img width="920" height="100" alt="скрин11" src="https://github.com/user-attachments/assets/c3c56380-7a67-4b03-883c-fac07f89f531" />
 
 ## 11. Поиск созданного файла по имени
 
-    nasta@MacBook-Air-Nasta ~ % find practice -name "numbers.txt"
-    practice/numbers.txt
+Для поиска файлов по имени используется утилита find. Она рекурсивно обходит указанную директорию и все её подкаталоги.
 
-Поиск всех текстовых файлов:
+Первая команда нашла точный путь к конкретному файлу. Вторая команда с использованием маски *.txt вывела список всех текстовых файлов во всей структуре
 
-    nasta@MacBook-Air-Nasta ~ % find practice -name "*.txt"
-    practice/numbers.txt
-    practice/numbers2.txt
+<img width="892" height="164" alt="скрин12" src="https://github.com/user-attachments/assets/9923c965-1da7-405c-89aa-14f173a215b7" />
+
 
 ## 12. Удаление созданных файлов и каталогов
 
-    nasta@MacBook-Air-Nasta ~ % rm -r practice
+Для удаления каталога вместе со всем его содержимым используется команда rm с флагом -r (recursive).
 
-Проверка удаления:
+Команда rm -r practice удалила папку practice со всеми вложенными файлами и каталогами. Последующая проверка ls practice выдала ошибку No such file or directory, что подтверждает полное удаление объекта.
 
-    nasta@MacBook-Air-Nasta ~ % ls practice
-    ls: practice: No such file or directory
+<img width="774" height="132" alt="скрин13" src="https://github.com/user-attachments/assets/62a9d690-81ad-4f9e-b35e-4da4ccc89329" />
 
-Каталог practice и все находившиеся в нём файлы и подкаталоги удалены.
 
 ## Итоговая структура каталогов до удаления
 
